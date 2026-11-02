@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrimonial.com — Meaningful Connections &amp; Verified Matchmaking</title>
+  <meta name="description" content="A trusted, dignified matrimonial and matchmaking platform uniting verified profiles, shared values, and personalized human guidance.">
+
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#415186',
+            'primary-container': '#5969a0',
+            'primary-fixed': '#dce1ff',
+            'primary-fixed-dim': '#b5c4ff',
+            'on-primary': '#ffffff',
+            'on-primary-container': '#eaecff',
+            'secondary': '#8b4e38',
+            'secondary-container': '#fdae92',
+            'secondary-fixed': '#ffdbcf',
+            'secondary-fixed-dim': '#ffb59b',
+            'on-secondary': '#ffffff',
+            'on-secondary-fixed': '#370e01',
+            'tertiary': '#5b4e6a',
+            'tertiary-container': '#746683',
+            'tertiary-fixed': '#eddcfe',
+            'tertiary-fixed-dim': '#d1c0e1',
+            'on-tertiary': '#ffffff',
+            'on-tertiary-fixed': '#21172f',
+            'surface': '#fff7fd',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-low': '#fdefff',
+            'surface-container': '#f9e8ff',
+            'surface-container-high': '#f6e1ff',
+            'surface-container-highest': '#f0dbf9',
+            'on-surface': '#23162c',
+            'on-surface-variant': '#45464f',
+            'outline': '#757680',
+            'outline-variant': '#c5c6d1',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          spacing: {
+            'space-xs': '0.25rem',
+            'space-sm': '0.5rem',
+            'space-md': '1rem',
+            'space-lg': '1.5rem',
+            'space-xl': '2.5rem',
+            'gutter-lg': '2rem',
+            'margin-mobile': '1.25rem',
+            'margin-desktop': '3.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #fff7fd;
+      color: #23162c;
+      margin: 0;
+      padding: 0;
+    }
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-display-lg {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    .font-headline-lg {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(26px, 3.5vw, 32px);
+      line-height: 1.3;
+    }
+    .font-headline-md {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 26px;
+      line-height: 34px;
+    }
+    .font-headline-sm {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-[#dce1ff] selection:text-[#02174b]">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="fixed top-0 w-full z-50 transition-all duration-300" style="background: rgba(28, 8, 23, 0.94); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group text-decoration-none">
+        <svg class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 48 48" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 40 C14 30, 22 20, 36 10"></path>
+          <path d="M20 31 C17 26, 17 20, 22 17 C26 21, 25 27, 20 31 Z" fill="#f59e0b" fill-opacity="0.25"></path>
+          <path d="M26 24 C27 18, 33 16, 37 19 C36 24, 30 26, 26 24 Z" fill="#f59e0b" fill-opacity="0.25"></path>
+          <path d="M16 36 C12 33, 11 27, 15 25 C18 28, 18 33, 16 36 Z" fill="#f59e0b" fill-opacity="0.25"></path>
+          <path d="M31 16 C33 11, 39 10, 42 13 C41 17, 36 19, 31 16 Z" fill="#f59e0b" fill-opacity="0.25"></path>
+        </svg>
+        <div class="flex flex-col">
+          <span class="font-headline-md italic text-[22px] sm:text-[26px] text-white tracking-tight leading-none" style="font-family: 'Playfair Display', Georgia, serif;">
+            Matrimonial.com
+          </span>
+          <span class="text-[9.5px] text-amber-300/90 tracking-[0.24em] uppercase mt-1 font-semibold">
+            UK &amp; International Matchmaking Bureau • London
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-7">
+        <nav class="flex items-center gap-7">
+          <a href="#" class="relative text-[14.5px] font-medium text-white hover:text-amber-300 transition-colors py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-amber-400">
+            Home
+          </a>
+          <a href="#engaged-pairs" class="text-[14.5px] font-medium text-rose-100/80 hover:text-amber-300 transition-colors py-1 flex items-center gap-1.5">
+            <span>Engaged Couples</span>
+            <span class="bg-amber-400 text-stone-950 text-[10px] font-bold px-1.5 py-0.5 rounded-full">New</span>
+          </a>
+          <a href="#browse-matches" class="text-[14.5px] font-medium text-rose-100/80 hover:text-amber-300 transition-colors py-1">
+            Curated Profiles
+          </a>
+          <a href="#about-us" class="text-[14.5px] font-medium text-rose-100/80 hover:text-amber-300 transition-colors py-1">
+            About the Bureau
+          </a>
+          <a href="#pillars" class="text-[14.5px] font-medium text-rose-100/80 hover:text-amber-300 transition-colors py-1">
+            Pillars of Trust
+          </a>
+          <a href="#contact-section" class="text-[14.5px] font-medium text-rose-100/80 hover:text-amber-300 transition-colors py-1">
+            Contact Mayfair
+          </a>
+        </nav>
+        <button onclick="openBooking('Confidential Membership Consultation')" class="inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-bold text-[14px] px-6 py-2.5 rounded-full transition-all shadow-md hover:shadow-amber-500/25 gap-2 cursor-pointer transform hover:-translate-y-0.5">
+          <span class="material-symbols-outlined text-[18px]">lock</span>
+          <span>Apply for Membership</span>
+        </button>
+      </div>
+
+      <!-- Mobile Button -->
+      <div class="flex lg:hidden items-center gap-3">
+        <button onclick="openBooking('Confidential Membership Consultation')" class="bg-amber-400 text-stone-950 font-bold text-xs px-3.5 py-2 rounded-full">
+          Apply
+        </button>
+        <button onclick="toggleMobileMenu()" class="p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-[#240c1e] px-6 py-4 space-y-3 shadow-2xl">
+      <a href="#" onclick="toggleMobileMenu()" class="block text-[15px] font-medium text-white py-1.5">Home</a>
+      <a href="#engaged-pairs" onclick="toggleMobileMenu()" class="block text-[15px] font-medium text-rose-100/80 hover:text-amber-300 py-1.5">Engaged Couples</a>
+      <a href="#browse-matches" onclick="toggleMobileMenu()" class="block text-[15px] font-medium text-rose-100/80 hover:text-amber-300 py-1.5">Curated Member Portfolios</a>
+      <a href="#about-us" onclick="toggleMobileMenu()" class="block text-[15px] font-medium text-rose-100/80 hover:text-amber-300 py-1.5">About the Bureau</a>
+      <a href="#pillars" onclick="toggleMobileMenu()" class="block text-[15px] font-medium text-rose-100/80 hover:text-amber-300 py-1.5">Pillars of Trust</a>
+      <a href="#contact-section" onclick="toggleMobileMenu()" class="block text-[15px] font-medium text-rose-100/80 hover:text-amber-300 py-1.5">Contact Mayfair Office</a>
+      <button onclick="toggleMobileMenu(); openBooking('Confidential Membership Consultation');" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-stone-950 font-bold text-[14px] py-2.5 rounded-full mt-2 cursor-pointer">
+        <span class="material-symbols-outlined text-[18px]">lock</span>
+        <span>Apply for Private Membership</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="flex-1 w-full">
+
+    <!-- 1. HERO SECTION -->
+    <div class="relative w-full overflow-hidden bg-[#0d1424] text-white pt-28 sm:pt-36 pb-16 sm:pb-24 transition-colors duration-700">
+      <!-- UK & International Marriage Background Image -->
+      <img id="hero-bg-img" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=85" alt="UK Matrimonial Groom and Bride in Classic Wedding Attire" class="absolute inset-0 w-full h-full object-cover object-right md:object-[75%_center] pointer-events-none -z-20 filter brightness-[0.88] contrast-[1.05] transition-opacity duration-700">
+      <!-- Soft British Navy & Slate Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#090e1a]/95 via-[#090e1a]/82 md:via-[#090e1a]/65 to-[#090e1a]/25 pointer-events-none -z-10"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#090e1a] via-transparent to-black/40 pointer-events-none -z-10"></div>
+      <div class="absolute -top-32 left-1/3 -translate-x-1/2 w-[650px] h-[350px] bg-gradient-to-r from-amber-500/15 via-sky-600/20 to-indigo-800/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <!-- Text Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm text-amber-200">
+              <span class="material-symbols-outlined text-[18px] text-amber-400">verified</span>
+              <span class="font-semibold tracking-wide uppercase text-[11px] sm:text-xs">
+                The UK &amp; International Matrimonial Bureau • London &amp; Mayfair
+              </span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-[1.15] text-white">
+              Where Intellectual Equal Meets 
+              <span class="italic text-amber-300 font-serif" style="font-family: 'Playfair Display', Georgia, serif;">
+                Lifelong Marriage
+              </span>
+            </h1>
+
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl font-light">
+              Bespoke, discreet matchmaking for accomplished professionals, executives, and high-calibre singles across the United Kingdom and Europe. Every introduction is vetted in person with absolute confidentiality.
+            </p>
+
+            <!-- Curated Member Matchmaker Filter Bar -->
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-5 shadow-2xl space-y-4">
+              <div class="flex items-center justify-between pb-2 border-b border-white/15 text-xs">
+                <span class="font-semibold uppercase tracking-wider text-amber-300 flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px]">favorite</span>
+                  Curated Partner Introductions
+                </span>
+                <span class="text-white/80 hidden sm:inline-block">London • Surrey • Cotswolds • International</span>
+              </div>
+
+              <form onsubmit="handleHeroSearch(event)" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="space-y-1">
+                  <label class="text-[11px] uppercase tracking-wider text-slate-300 font-medium">Seeking</label>
+                  <select class="w-full bg-[#131b2e]/90 text-white text-xs sm:text-sm rounded-lg px-3 py-2.5 border border-white/20 focus:outline-none">
+                    <option value="Bride">Bride / Accomplished Lady</option>
+                    <option value="Groom">Groom / Accomplished Gentleman</option>
+                  </select>
+                </div>
+
+                <div class="space-y-1">
+                  <label class="text-[11px] uppercase tracking-wider text-slate-300 font-medium">Age Bracket</label>
+                  <select class="w-full bg-[#131b2e]/90 text-white text-xs sm:text-sm rounded-lg px-3 py-2.5 border border-white/20 focus:outline-none">
+                    <option value="23-29">23 to 29 Yrs</option>
+                    <option value="26-34" selected>26 to 34 Yrs</option>
+                    <option value="32-42">32 to 42 Yrs</option>
+                    <option value="40-55">40 to 55 Yrs</option>
+                  </select>
+                </div>
+
+                <div class="space-y-1">
+                  <label class="text-[11px] uppercase tracking-wider text-slate-300 font-medium">Residence</label>
+                  <select class="w-full bg-[#131b2e]/90 text-white text-xs sm:text-sm rounded-lg px-3 py-2.5 border border-white/20 focus:outline-none">
+                    <option value="London">London (Kensington, Mayfair, Chelsea)</option>
+                    <option value="Surrey">Surrey &amp; Home Counties</option>
+                    <option value="Oxbridge">Oxford &amp; Cambridge</option>
+                    <option value="Cotswolds">Cotswolds &amp; West Country</option>
+                    <option value="Edinburgh">Edinburgh &amp; Scotland</option>
+                    <option value="International">Europe / International</option>
+                  </select>
+                </div>
+
+                <div class="space-y-1">
+                  <label class="text-[11px] uppercase tracking-wider text-slate-300 font-medium">Background</label>
+                  <select class="w-full bg-[#131b2e]/90 text-white text-xs sm:text-sm rounded-lg px-3 py-2.5 border border-white/20 focus:outline-none">
+                    <option value="Oxbridge">Oxbridge &amp; Russell Group</option>
+                    <option value="LawMedicine">Medicine, Barrister, Surgery</option>
+                    <option value="Finance">Finance, PE &amp; Investment</option>
+                    <option value="Founders">Founders &amp; CEOs</option>
+                    <option value="Arts">Arts, Architecture &amp; Heritage</option>
+                  </select>
+                </div>
+
+                <div class="sm:col-span-2 md:col-span-4 pt-1 flex flex-col sm:flex-row gap-3">
+                  <button type="submit" class="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-bold text-sm px-6 py-3 rounded-xl transition-all shadow-lg hover:shadow-amber-500/30 cursor-pointer transform hover:-translate-y-0.5">
+                    <span class="material-symbols-outlined text-[20px]">search</span>
+                    <span>Explore Curated UK Portfolios</span>
+                  </button>
+
+                  <button type="button" onclick="openBooking('Confidential Membership Consultation')" class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white text-sm font-semibold px-6 py-3 rounded-xl border border-white/30 transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-[18px]">lock</span>
+                    <span>Apply for Private Membership</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Portal Trust Highlights -->
+            <div class="flex flex-wrap items-center gap-3 pt-2 text-xs text-slate-300">
+              <span class="flex items-center gap-1.5 bg-black/35 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10">
+                <span class="material-symbols-outlined text-[16px] text-emerald-400">verified_user</span>
+                100% In-Person ID &amp; Background Vetted
+              </span>
+              <span class="flex items-center gap-1.5 bg-black/35 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10">
+                <span class="material-symbols-outlined text-[16px] text-amber-400">hotel_class</span>
+                Bespoke Matchmaking Director
+              </span>
+              <span class="flex items-center gap-1.5 bg-black/35 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10">
+                <span class="material-symbols-outlined text-[16px] text-sky-400">lock</span>
+                Strict British GDPR Discretion
+              </span>
+            </div>
+          </div>
+
+          <!-- Visual Column: Mayfair Highlight Card & Background Switcher -->
+          <div class="lg:col-span-5 flex flex-col items-center lg:items-end justify-center space-y-4">
+            <div class="w-full max-w-sm bg-[#0e1629]/80 backdrop-blur-md border border-white/20 rounded-2xl p-5 shadow-2xl text-left space-y-3.5">
+              <div class="flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 to-indigo-600 flex items-center justify-center text-white shadow-md">
+                    <span class="material-symbols-outlined text-[20px]">diamond</span>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-sm text-white leading-tight">Mayfair Advisory</h3>
+                    <p class="text-[11px] text-amber-200">Berkeley Square, London W1</p>
+                  </div>
+                </div>
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
+                  Private Member
+                </span>
+              </div>
+
+              <p class="text-xs text-slate-200 leading-relaxed italic border-l-2 border-amber-400/80 pl-3">
+                &ldquo;A lasting marriage requires profound emotional resonance, shared intellect, and aligned life values.&rdquo;
+              </p>
+
+              <div class="grid grid-cols-3 gap-2 pt-2 border-t border-white/15 text-center">
+                <div class="bg-white/10 rounded-lg p-2">
+                  <div class="text-base font-bold text-amber-300">84%</div>
+                  <div class="text-[10px] text-white/70">Success Rate</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-2">
+                  <div class="text-base font-bold text-amber-300">1:1</div>
+                  <div class="text-[10px] text-white/70">Dedicated</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-2">
+                  <div class="text-base font-bold text-amber-300">100%</div>
+                  <div class="text-[10px] text-white/70">Confidential</div>
+                </div>
+              </div>
+
+              <button type="button" onclick="openBooking('Private Matchmaker Consultation')" class="w-full text-center text-xs text-amber-200 hover:text-white font-medium py-1.5 flex items-center justify-center gap-1 transition-colors cursor-pointer">
+                <span>Book a Private Matchmaker Consultation</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </button>
+            </div>
+
+            <!-- Background Theme Switcher Pill -->
+            <div class="w-full max-w-sm bg-[#090f1d]/90 backdrop-blur-md border border-white/15 rounded-xl p-2.5 shadow-xl">
+              <div class="flex items-center justify-between mb-2 px-1">
+                <span class="text-[11px] uppercase tracking-wider text-amber-300 font-semibold flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">wallpaper</span>
+                  Wedding Setting (UK &amp; International):
+                </span>
+                <span id="hero-bg-tag" class="text-[10px] text-white/60">Classic British Groom &amp; Bride</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-1.5">
+                <button id="bg-btn-0" type="button" onclick="setHeroBg(0)" class="text-left text-xs px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer truncate bg-amber-400 text-stone-950 font-bold shadow-md">
+                  <span class="truncate">💍 Black Tie &amp; Couture</span>
+                </button>
+                <button id="bg-btn-1" type="button" onclick="setHeroBg(1)" class="text-left text-xs px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer truncate bg-white/10 text-white/80 hover:bg-white/20">
+                  <span class="truncate">🏰 Country Manor</span>
+                </button>
+                <button id="bg-btn-2" type="button" onclick="setHeroBg(2)" class="text-left text-xs px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer truncate bg-white/10 text-white/80 hover:bg-white/20">
+                  <span class="truncate">🌿 Country Romance</span>
+                </button>
+                <button id="bg-btn-3" type="button" onclick="setHeroBg(3)" class="text-left text-xs px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer truncate bg-white/10 text-white/80 hover:bg-white/20">
+                  <span class="truncate">💐 Cathedral &amp; Arch</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. RECENTLY ENGAGED UK & INTERNATIONAL COUPLES -->
+    <section id="engaged-pairs" class="w-full py-20 bg-surface relative scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 bg-secondary-fixed/50 px-4 py-1.5 rounded-full mb-3 border border-secondary/20 shadow-xs">
+            <span class="material-symbols-outlined text-[18px] text-secondary">volunteer_activism</span>
+            <span class="text-xs font-semibold text-secondary uppercase tracking-widest">
+              From Private Introduction to Holy Matrimony
+            </span>
+          </div>
+
+          <h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl text-on-surface">
+            Recently Engaged Couples in the UK
+          </h2>
+
+          <p class="text-base sm:text-lg text-on-surface-variant mt-4">
+            Over <strong class="text-on-surface font-semibold">4,800 accomplished professionals and high-calibre singles</strong> have met their lifelong spouses through our discreet Mayfair bureau.
+          </p>
+
+          <div class="mt-5 flex flex-wrap items-center justify-center gap-6 text-xs text-on-surface-variant">
+            <span class="flex items-center gap-1.5 font-medium">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              100% In-Person Vetted Members
+            </span>
+            <span class="flex items-center gap-1.5 font-medium">
+              <span class="material-symbols-outlined text-[16px] text-secondary">diamond</span>
+              British &amp; European Standards
+            </span>
+            <span class="flex items-center gap-1.5 font-medium">
+              <span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+              Average Match Time: 45 Days
+            </span>
+          </div>
+        </div>
+
+        <!-- 4 Engaged Pairs Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <!-- Pair 1 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-[#f0dbf9]/80 flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1.5">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80" alt="William and Victoria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#23162c]/90 via-[#23162c]/25 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#8b4e38] text-white text-[11px] font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
+                <span class="material-symbols-outlined text-[14px]">diamond</span>
+                <span>Engaged</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-[#415186] text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                Matched in 46d
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">William &amp; Victoria</h3>
+                <p class="text-xs text-white/90 mt-0.5">Engaged: October 14, 2026 • Kensington &amp; Cotswolds</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-1 text-xs text-[#5c4a5f]">
+                <p><strong>Groom:</strong> William Sterling-Fox (Partner, Magic Circle Law)</p>
+                <p><strong>Bride:</strong> Victoria St. Clair (Conservation Architect, Cambridge)</p>
+                <p class="text-[12px] italic text-on-surface-variant pt-2 leading-relaxed bg-surface-container-low/60 p-2.5 rounded-xl border border-[#e5d7de]/60">
+                  &ldquo;Matrimonial.com arranged afternoon tea in St. James's. Following a walk in Gloucestershire, William proposed at sunset.&rdquo;
+                </p>
+              </div>
+              <button onclick="openBooking('Private Consultation')" class="w-full py-2.5 rounded-xl text-xs font-semibold text-primary bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 transition-colors">
+                Connect with Mayfair Director
+              </button>
+            </div>
+          </div>
+
+          <!-- Pair 2 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-[#f0dbf9]/80 flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1.5">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?auto=format&fit=crop&w=700&q=80" alt="James and Claire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#23162c]/90 via-[#23162c]/25 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#8b4e38] text-white text-[11px] font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
+                <span class="material-symbols-outlined text-[14px]">diamond</span>
+                <span>Engaged</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-[#415186] text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                Matched in 58d
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">James &amp; Dr. Claire</h3>
+                <p class="text-xs text-white/90 mt-0.5">Engaged: September 20, 2026 • Chelsea, London</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-1 text-xs text-[#5c4a5f]">
+                <p><strong>Groom:</strong> James Montagu-Evans (MD, Private Equity)</p>
+                <p><strong>Bride:</strong> Dr. Claire Ashworth (Consultant Neurologist)</p>
+                <p class="text-[12px] italic text-on-surface-variant pt-2 leading-relaxed bg-surface-container-low/60 p-2.5 rounded-xl border border-[#e5d7de]/60">
+                  &ldquo;Discretion was essential. We connected over literature and rowing, and announced our engagement overlooking the Thames.&rdquo;
+                </p>
+              </div>
+              <button onclick="openBooking('Private Consultation')" class="w-full py-2.5 rounded-xl text-xs font-semibold text-primary bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 transition-colors">
+                Connect with Mayfair Director
+              </button>
+            </div>
+          </div>
+
+          <!-- Pair 3 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-[#f0dbf9]/80 flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1.5">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Harry and Camilla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#23162c]/90 via-[#23162c]/25 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#8b4e38] text-white text-[11px] font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
+                <span class="material-symbols-outlined text-[14px]">diamond</span>
+                <span>Engaged</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-[#415186] text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                Matched in 35d
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">Harry &amp; Camilla</h3>
+                <p class="text-xs text-white/90 mt-0.5">Engaged: August 18, 2026 • Edinburgh &amp; London</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-1 text-xs text-[#5c4a5f]">
+                <p><strong>Groom:</strong> Harry Buchanan (Clean Energy Enterprise)</p>
+                <p><strong>Bride:</strong> Camilla FitzGerald (Fine Art Specialist)</p>
+                <p class="text-[12px] italic text-on-surface-variant pt-2 leading-relaxed bg-surface-container-low/60 p-2.5 rounded-xl border border-[#e5d7de]/60">
+                  &ldquo;Living between Edinburgh and London, the bureau bridged geography with dignified, authentic introductions.&rdquo;
+                </p>
+              </div>
+              <button onclick="openBooking('Private Consultation')" class="w-full py-2.5 rounded-xl text-xs font-semibold text-primary bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 transition-colors">
+                Connect with Mayfair Director
+              </button>
+            </div>
+          </div>
+
+          <!-- Pair 4 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-[#f0dbf9]/80 flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1.5">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=700&q=80" alt="Edward and Beatrice" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#23162c]/90 via-[#23162c]/25 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#8b4e38] text-white text-[11px] font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
+                <span class="material-symbols-outlined text-[14px]">diamond</span>
+                <span>Engaged</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-[#415186] text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                Matched in 42d
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">Edward &amp; Beatrice</h3>
+                <p class="text-xs text-white/90 mt-0.5">Engaged: July 25, 2026 • Richmond, Surrey</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-1 text-xs text-[#5c4a5f]">
+                <p><strong>Groom:</strong> Edward Cavendish (Partner, Tech Venture Capital)</p>
+                <p><strong>Bride:</strong> Beatrice Howard (Head of Heritage Curatorial)</p>
+                <p class="text-[12px] italic text-on-surface-variant pt-2 leading-relaxed bg-surface-container-low/60 p-2.5 rounded-xl border border-[#e5d7de]/60">
+                  &ldquo;We desired intellectual spark and shared aspirations. We exchanged rings in Richmond Park surrounded by family.&rdquo;
+                </p>
+              </div>
+              <button onclick="openBooking('Private Consultation')" class="w-full py-2.5 rounded-xl text-xs font-semibold text-primary bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 transition-colors">
+                Connect with Mayfair Director
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CURATED UK & INTERNATIONAL PROFILES SECTION -->
+    <section id="browse-matches" class="w-full py-20 bg-surface-container-low/50 relative scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 bg-primary-fixed/60 px-4 py-1.5 rounded-full mb-3 border border-primary/20 shadow-xs">
+            <span class="material-symbols-outlined text-[17px] text-primary">verified</span>
+            <span class="text-xs font-semibold text-primary uppercase tracking-widest">
+              UK &amp; International Bureau • In-Person ID &amp; Background Vetted
+            </span>
+          </div>
+
+          <h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl text-on-surface">
+            Curated Member Portfolios
+          </h2>
+
+          <p class="text-base sm:text-lg text-on-surface-variant mt-3">
+            Connect directly with verified accomplished professionals and distinguished British and European singles seeking holy matrimony.
+          </p>
+
+          <!-- Bride / Groom Switcher -->
+          <div class="mt-8 flex items-center justify-center">
+            <div class="bg-white p-1.5 rounded-full shadow-md border border-[#e5d7de] inline-flex items-center gap-2">
+              <button id="btn-brides" onclick="showCategory('brides')" class="flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-secondary text-white shadow-sm">
+                <span class="material-symbols-outlined text-[18px]">woman</span>
+                <span>Accomplished Ladies</span>
+              </button>
+              <button id="btn-grooms" onclick="showCategory('grooms')" class="flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer text-on-surface-variant hover:text-on-surface">
+                <span class="material-symbols-outlined text-[18px]">man</span>
+                <span>Accomplished Gentlemen</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profiles Container: Brides -->
+        <div id="brides-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Bride 1 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-[#f0dbf9]/80 flex flex-col justify-between transition-all duration-300 group">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" alt="Charlotte Montgomery" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10.5px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[13px]">verified</span>
+                <span>100% Vetted</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-on-surface text-[10.5px] font-medium px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Online Now</span>
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">Charlotte Montgomery</h3>
+                <p class="text-xs text-white/90 mt-0.5">28 Yrs • 5'7" • Single</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2 text-xs text-on-surface-variant">
+                <div class="text-on-surface font-semibold text-[13px]">Commercial Barrister • Inner Temple</div>
+                <div class="text-secondary font-semibold">£140,000 - £180,000 p.a. • Oxford BCL</div>
+                <div>Kensington, London • British Heritage</div>
+                <div class="pt-2 flex items-center justify-between border-t border-[#f0dbf9]/70 text-xs">
+                  <span class="text-primary font-semibold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+                    Compatibility: 97% Match
+                  </span>
+                  <span class="bg-secondary-fixed/50 text-on-secondary-fixed px-2 py-0.5 rounded-md font-medium text-[11px]">Verified Dossier</span>
+                </div>
+              </div>
+              <div class="pt-3 border-t border-[#f0dbf9]/80 flex gap-2">
+                <button onclick="sendInterest(this)" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-primary text-white hover:bg-primary-container transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                  <span>Request Introduction</span>
+                </button>
+                <button onclick="openBooking('Introduction to Charlotte Montgomery')" class="px-3.5 py-2.5 rounded-xl border border-outline-variant/60 hover:bg-surface-container text-xs font-semibold text-on-surface transition-colors cursor-pointer">
+                  Dossier
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bride 2 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-[#f0dbf9]/80 flex flex-col justify-between transition-all duration-300 group">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80" alt="Sophia Von Berg" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10.5px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[13px]">verified</span>
+                <span>100% Vetted</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-on-surface text-[10.5px] font-medium px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Active 15m ago</span>
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">Sophia Von Berg</h3>
+                <p class="text-xs text-white/90 mt-0.5">29 Yrs • 5'8" • Single</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2 text-xs text-on-surface-variant">
+                <div class="text-on-surface font-semibold text-[13px]">Venture Capital Principal • Mayfair Growth</div>
+                <div class="text-secondary font-semibold">£190,000 - £240,000 p.a. • LSE &amp; INSEAD</div>
+                <div>Mayfair, London • Anglo-Swiss</div>
+                <div class="pt-2 flex items-center justify-between border-t border-[#f0dbf9]/70 text-xs">
+                  <span class="text-primary font-semibold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+                    Compatibility: 95% Match
+                  </span>
+                  <span class="bg-secondary-fixed/50 text-on-secondary-fixed px-2 py-0.5 rounded-md font-medium text-[11px]">Verified Dossier</span>
+                </div>
+              </div>
+              <div class="pt-3 border-t border-[#f0dbf9]/80 flex gap-2">
+                <button onclick="sendInterest(this)" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-primary text-white hover:bg-primary-container transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                  <span>Request Introduction</span>
+                </button>
+                <button onclick="openBooking('Introduction to Sophia Von Berg')" class="px-3.5 py-2.5 rounded-xl border border-outline-variant/60 hover:bg-surface-container text-xs font-semibold text-on-surface transition-colors cursor-pointer">
+                  Dossier
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bride 3 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-[#f0dbf9]/80 flex flex-col justify-between transition-all duration-300 group">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=700&q=80" alt="Dr. Eleanor Crawford" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10.5px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[13px]">verified</span>
+                <span>100% Vetted</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-on-surface text-[10.5px] font-medium px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                <span>Active 1h ago</span>
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">Dr. Eleanor Crawford</h3>
+                <p class="text-xs text-white/90 mt-0.5">31 Yrs • 5'6" • Single</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2 text-xs text-on-surface-variant">
+                <div class="text-on-surface font-semibold text-[13px]">Consultant Paediatrician • Imperial Healthcare</div>
+                <div class="text-secondary font-semibold">£125,000 - £150,000 p.a. • Cambridge MB BChir</div>
+                <div>Richmond, Surrey • Scottish &amp; English</div>
+                <div class="pt-2 flex items-center justify-between border-t border-[#f0dbf9]/70 text-xs">
+                  <span class="text-primary font-semibold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+                    Compatibility: 98% Match
+                  </span>
+                  <span class="bg-secondary-fixed/50 text-on-secondary-fixed px-2 py-0.5 rounded-md font-medium text-[11px]">Verified Dossier</span>
+                </div>
+              </div>
+              <div class="pt-3 border-t border-[#f0dbf9]/80 flex gap-2">
+                <button onclick="sendInterest(this)" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-primary text-white hover:bg-primary-container transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                  <span>Request Introduction</span>
+                </button>
+                <button onclick="openBooking('Introduction to Dr. Eleanor Crawford')" class="px-3.5 py-2.5 rounded-xl border border-outline-variant/60 hover:bg-surface-container text-xs font-semibold text-on-surface transition-colors cursor-pointer">
+                  Dossier
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profiles Container: Grooms (hidden by default) -->
+        <div id="grooms-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Groom 1 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-outline-variant/40 flex flex-col justify-between transition-all duration-300 group">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Dr. Oliver Kensington" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10.5px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[13px]">verified</span>
+                <span>100% Vetted</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-on-surface text-[10.5px] font-medium px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Online Now</span>
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">Dr. Oliver Kensington</h3>
+                <p class="text-xs text-white/90 mt-0.5">33 Yrs • 6'1" • Single</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2 text-xs text-on-surface-variant">
+                <div class="text-on-surface font-semibold text-[13px]">Consultant Orthopaedic Surgeon • Marylebone</div>
+                <div class="text-secondary font-semibold">£180,000 - £230,000 p.a. • Cambridge MB BChir</div>
+                <div>London • British Heritage</div>
+                <div class="pt-2 flex items-center justify-between border-t border-outline-variant/30 text-xs">
+                  <span class="text-primary font-semibold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+                    Compatibility: 98% Match
+                  </span>
+                  <span class="bg-secondary-fixed/50 text-on-secondary-fixed px-2 py-0.5 rounded-md font-medium text-[11px]">Verified Dossier</span>
+                </div>
+              </div>
+              <div class="pt-3 border-t border-outline-variant/30 flex gap-2">
+                <button onclick="sendInterest(this)" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-primary text-white hover:bg-primary-container transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                  <span>Request Introduction</span>
+                </button>
+                <button onclick="openBooking('Introduction to Dr. Oliver Kensington')" class="px-3.5 py-2.5 rounded-xl border border-outline-variant/60 hover:bg-surface-container text-xs font-semibold text-on-surface transition-colors cursor-pointer">
+                  Dossier
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Groom 2 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-outline-variant/40 flex flex-col justify-between transition-all duration-300 group">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Alexander Sterling" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10.5px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[13px]">verified</span>
+                <span>100% Vetted</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-on-surface text-[10.5px] font-medium px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Active 20m ago</span>
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">Alexander Sterling</h3>
+                <p class="text-xs text-white/90 mt-0.5">35 Yrs • 6'2" • Single</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2 text-xs text-on-surface-variant">
+                <div class="text-on-surface font-semibold text-[13px]">Founder &amp; CEO, DeepTech • Angel Investor</div>
+                <div class="text-secondary font-semibold">£350,000+ p.a. • Imperial MEng</div>
+                <div>Shoreditch &amp; Cotswolds • British</div>
+                <div class="pt-2 flex items-center justify-between border-t border-outline-variant/30 text-xs">
+                  <span class="text-primary font-semibold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+                    Compatibility: 96% Match
+                  </span>
+                  <span class="bg-secondary-fixed/50 text-on-secondary-fixed px-2 py-0.5 rounded-md font-medium text-[11px]">Verified Dossier</span>
+                </div>
+              </div>
+              <div class="pt-3 border-t border-outline-variant/30 flex gap-2">
+                <button onclick="sendInterest(this)" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-primary text-white hover:bg-primary-container transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                  <span>Request Introduction</span>
+                </button>
+                <button onclick="openBooking('Introduction to Alexander Sterling')" class="px-3.5 py-2.5 rounded-xl border border-outline-variant/60 hover:bg-surface-container text-xs font-semibold text-on-surface transition-colors cursor-pointer">
+                  Dossier
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Groom 3 -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-outline-variant/40 flex flex-col justify-between transition-all duration-300 group">
+            <div class="relative h-72 w-full overflow-hidden bg-surface-container-highest">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80" alt="Julian Hastings" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10.5px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[13px]">verified</span>
+                <span>100% Vetted</span>
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 text-on-surface text-[10.5px] font-medium px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                <span>Active 2h ago</span>
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold font-serif leading-tight">Julian Hastings</h3>
+                <p class="text-xs text-white/90 mt-0.5">32 Yrs • 5'11" • Single</p>
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2 text-xs text-on-surface-variant">
+                <div class="text-on-surface font-semibold text-[13px]">Partner, Infrastructure • Caledonian Capital</div>
+                <div class="text-secondary font-semibold">£165,000 - £210,000 p.a. • Edinburgh &amp; Oxford</div>
+                <div>Westminster &amp; Edinburgh • Scottish</div>
+                <div class="pt-2 flex items-center justify-between border-t border-outline-variant/30 text-xs">
+                  <span class="text-primary font-semibold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+                    Compatibility: 95% Match
+                  </span>
+                  <span class="bg-secondary-fixed/50 text-on-secondary-fixed px-2 py-0.5 rounded-md font-medium text-[11px]">Verified Dossier</span>
+                </div>
+              </div>
+              <div class="pt-3 border-t border-outline-variant/30 flex gap-2">
+                <button onclick="sendInterest(this)" class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-xs sm:text-sm bg-primary text-white hover:bg-primary-container transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                  <span>Request Introduction</span>
+                </button>
+                <button onclick="openBooking('Introduction to Julian Hastings')" class="px-3.5 py-2.5 rounded-xl border border-outline-variant/60 hover:bg-surface-container text-xs font-semibold text-on-surface transition-colors cursor-pointer">
+                  Dossier
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ABOUT SECTION -->
+    <section class="w-full bg-surface-container-low py-space-xl scroll-mt-20" id="about-us" style="padding-top: 120px; padding-bottom: 120px;">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Portrait -->
+          <div class="lg:col-span-5 order-2 lg:order-1 relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-highest">
+              <img class="w-full h-[520px] object-cover object-top" alt="Matrimonial.com Consultant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3Yk9uQx4HHU1x3V4vIAwnBREmXsGQTJEB16Xi5zNiotUdnWpAVFOmDAaDVdagzuTua4PxSGDcxbuu81Is3F6KpCbvpWthIR9foB3YLPO64VVrHuXxBExsGPDeQkcyQR6SV_lQt7J32PnLLhAcwse3AXhw8XIsk0nvnzYAfZsZFul8cRQHSan-sqAQx1cXu1VQgP230mue0-zTY-YC0fE35DKULJx9M33vnpt82tR1FVX1b7Xbn8zRfQ">
+              <div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-on-primary">
+                <p class="font-headline-sm text-headline-sm text-white">Matrimonial.com</p>
+                <p class="text-xs text-surface-container-high opacity-90 font-medium">
+                  Executive Matchmaking &amp; Family Relationship Advisory
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+            <div class="inline-flex items-center gap-2 bg-surface-container-high px-4 py-1.5 rounded-full shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+              <span class="text-xs font-semibold text-secondary tracking-wider uppercase">
+                Master's Matrimonial Consultant &amp; Registered Family Counselor
+              </span>
+            </div>
+
+            <h2 class="font-display-lg text-on-surface tracking-tight leading-tight italic">
+              Bespoke Matchmaker — <span class="italic text-primary">Matrimonial.com</span>
+            </h2>
+
+            <p class="text-base sm:text-lg text-on-surface-variant max-w-xl leading-relaxed">
+              Welcome to <strong>Matrimonial.com</strong>, the premier private matchmaking bureau based in Mayfair, London. By uniting decades of professional psychological compatibility profiling with bespoke, high-discretion <strong>matrimonial matchmaking</strong>, our senior directors guide accomplished professionals and distinguished families to foster genuine, lifelong British and international marriages.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <button onclick="openBooking('Initial Consultation')" class="inline-flex items-center justify-center bg-primary-container text-on-primary text-sm font-medium px-6 py-3.5 rounded-lg hover:bg-primary transition-all shadow-md gap-2 cursor-pointer">
+                <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+                <span>Book an Initial Consultation</span>
+              </button>
+
+              <button onclick="openBooking('Free 15-Minute Consultation')" class="inline-flex items-center justify-center bg-surface-container text-primary text-sm font-medium px-6 py-3.5 rounded-lg hover:bg-surface-container-high transition-all shadow-sm border-l-4 border-secondary gap-2 cursor-pointer">
+                <span class="material-symbols-outlined text-secondary text-[18px]">phone_in_talk</span>
+                <span>Free 15-Minute Consultation</span>
+              </button>
+            </div>
+
+            <!-- Credential Badges -->
+            <div class="pt-4 flex flex-wrap items-center gap-2 text-on-surface-variant">
+              <span class="bg-surface-container px-3.5 py-1.5 rounded-full text-xs text-tertiary shadow-sm flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[15px] text-primary">school</span>
+                Master of Matrimonial Advisory
+              </span>
+              <span class="bg-surface-container px-3.5 py-1.5 rounded-full text-xs text-tertiary shadow-sm flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[15px] text-primary">clinical_notes</span>
+                Registered Family Counselor
+              </span>
+              <span class="bg-surface-container px-3.5 py-1.5 rounded-full text-xs text-tertiary shadow-sm flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[15px] text-primary">verified</span>
+                100% Verified Profiles
+              </span>
+              <span class="bg-surface-container px-3.5 py-1.5 rounded-full text-xs text-tertiary shadow-sm flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[15px] text-primary">shield</span>
+                Certified Relationship Specialist
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TWO FOUNDATIONAL PILLARS -->
+    <section id="pillars" class="mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full max-w-7xl scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-semibold text-secondary tracking-widest uppercase block mb-2">
+          Clinical Breadth &amp; Heart
+        </span>
+        <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface">
+          Two Foundational Pillars of Sacred Matchmaking
+        </h2>
+        <p class="text-base text-on-surface-variant mt-3">
+          Where verified background integrity meets intuitive, lifelong relationship harmony.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <!-- Pillar 1 -->
+        <div class="bg-surface-container rounded-2xl p-8 lg:p-10 shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-6 shadow-sm">
+              <span class="material-symbols-outlined text-[28px]">psychology_alt</span>
+            </div>
+            <span class="text-xs font-semibold text-secondary uppercase tracking-wider">Primary Modality</span>
+            <h3 class="font-headline-md text-2xl text-on-surface mt-1 mb-4">
+              Personalized Human Matchmaking
+            </h3>
+            <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+              Matrimonial.com utilises a client-centred, experiential approach that grounds matrimonial search in genuine shared values. Instead of remaining overwhelmed by endless swipe apps, you explore real-time compatibility, emotional resonance, and lifestyle goals.
+            </p>
+            <ul class="space-y-3 text-xs sm:text-sm text-on-surface mb-8">
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                <span>Deep understanding of emotional readiness and relationship goals</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                <span>Family value attunement and cultural grounding</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                <span>Fostering genuine autonomy and honest courtship conversations</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl">
+            <p class="text-xs text-tertiary font-medium">
+              Certified Matrimonial Specialist (Global Matchmaking Institute)
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-surface-container rounded-2xl p-8 lg:p-10 shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-6 shadow-sm">
+              <span class="material-symbols-outlined text-[28px]">clinical_notes</span>
+            </div>
+            <span class="text-xs font-semibold text-primary uppercase tracking-wider">Foundational Discipline</span>
+            <h3 class="font-headline-md text-2xl text-on-surface mt-1 mb-4">
+              100% Verified Profile &amp; Family Integrity
+            </h3>
+            <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+              Decades of family advisory experience give Matrimonial.com an exceptional, unflappable foundation when conducting background screenings, verifying education and employment, and ensuring absolute privacy.
+            </p>
+            <ul class="space-y-3 text-xs sm:text-sm text-on-surface mb-8">
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                <span>Calm, safe containment and total discretion for discerning families</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                <span>Complete authentication of government IDs, career, and marital status</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                <span>Strict reflective standards of confidentiality and mutual consent</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl">
+            <p class="text-xs text-tertiary font-medium">
+              Registered Family Counselor Background &amp; Verification Accreditation
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CALL TO ACTION BANNER -->
+    <section class="mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full max-w-7xl relative z-20">
+      <div class="rounded-3xl bg-gradient-to-br from-secondary-fixed via-surface-container-high to-tertiary-fixed p-8 sm:p-12 lg:p-16 shadow-xl relative overflow-hidden text-center">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-white/40 blur-2xl pointer-events-none"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center gap-6 max-w-3xl mx-auto">
+          <span class="text-xs font-semibold text-secondary tracking-widest uppercase">
+            Take the Next Step
+          </span>
+          <h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl text-on-surface leading-tight">
+            Your Journey Starts with a Simple Conversation
+          </h2>
+          <p class="text-sm sm:text-base text-on-surface-variant max-w-xl">
+            Connect with our dedicated family matchmakers today for a confidential consultation.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a href="tel:+442079460912" class="inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-medium px-6 py-3.5 rounded-xl hover:bg-primary-container transition-all shadow-md">
+              <span class="material-symbols-outlined text-[20px]">call</span>
+              <span>+44 (0)20 7946 0912</span>
+            </a>
+            <button onclick="openBooking('General Matrimonial Enquiry')" class="inline-flex items-center gap-2 bg-surface text-on-surface text-sm font-medium px-6 py-3.5 rounded-xl hover:bg-surface-container transition-all shadow-sm cursor-pointer">
+              <span class="material-symbols-outlined text-[20px] text-primary">mail</span>
+              <span>Send an Enquiry</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact-section" class="w-full py-20 bg-surface scroll-mt-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-semibold text-secondary tracking-widest uppercase block mb-2">Connect &amp; Begin</span>
+          <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface">Connect With Our Mayfair Advisory</h2>
+          <p class="text-base text-on-surface-variant mt-3">
+            Whether you have questions regarding private membership or wish to schedule a confidential discussion, our senior directors invite you to connect.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <!-- Details Card -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-surface-container rounded-2xl p-6 sm:p-8 shadow-sm border border-[#f0dbf9]/70 space-y-6">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">location_on</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-base text-on-surface">London Headquarters</h3>
+                  <p class="text-xs sm:text-sm text-on-surface-variant">14 Berkeley Square, Mayfair, London W1J 6BD, UK</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">call</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-base text-on-surface">Direct Phone</h3>
+                  <a href="tel:+442079460912" class="text-xs sm:text-sm text-primary font-medium hover:underline block">+44 (0)20 7946 0912</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">mail</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-base text-on-surface">Private Enquiries</h3>
+                  <a href="mailto:advisory@matrimonial.com" class="text-xs sm:text-sm text-primary font-medium hover:underline block">advisory@matrimonial.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">schedule</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-base text-on-surface">Consultation Hours</h3>
+                  <p class="text-xs sm:text-sm text-on-surface-variant">Monday – Friday: By Strict Appointment</p>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-[#f0dbf9] text-xs text-on-surface-variant leading-relaxed">
+                <p><strong>Confidentiality Assurance:</strong> Every enquiry and membership dossier is protected under professional legal discretion and British GDPR data privacy.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-surface-container-low rounded-2xl p-6 sm:p-10 shadow-md border border-[#e5d7de]/80">
+              <form onsubmit="handleContactSubmit(event)" id="contact-form" class="space-y-4">
+                <h3 class="text-2xl font-serif text-on-surface mb-2">Request a Private Consultation</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Full Name *</label>
+                    <input type="text" required placeholder="e.g. William Cavendish" class="w-full px-4 py-2.5 rounded-xl border border-outline-variant/60 bg-white text-on-surface text-sm focus:ring-2 focus:ring-primary/40 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Email Address *</label>
+                    <input type="email" required placeholder="name@domain.co.uk" class="w-full px-4 py-2.5 rounded-xl border border-outline-variant/60 bg-white text-on-surface text-sm focus:ring-2 focus:ring-primary/40 focus:outline-none">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Phone Number *</label>
+                    <input type="tel" required placeholder="+44 7XXX XXXXXX" class="w-full px-4 py-2.5 rounded-xl border border-outline-variant/60 bg-white text-on-surface text-sm focus:ring-2 focus:ring-primary/40 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Consultation Type</label>
+                    <select class="w-full px-4 py-2.5 rounded-xl border border-outline-variant/60 bg-white text-on-surface text-sm focus:ring-2 focus:ring-primary/40 focus:outline-none">
+                      <option>Free 15-Minute Phone Consultation</option>
+                      <option>Initial Matrimonial Consultation</option>
+                      <option>Family Value &amp; Compatibility Review</option>
+                      <option>Relationship &amp; Courtship Counseling</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Partner Expectations / Notes</label>
+                  <textarea rows="3" placeholder="Share what qualities you are seeking in a life partner..." class="w-full px-4 py-2.5 rounded-xl border border-outline-variant/60 bg-white text-on-surface text-sm focus:ring-2 focus:ring-primary/40 focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-white font-medium text-sm px-8 py-3 rounded-xl shadow-md transition-all cursor-pointer">
+                  <span>Submit Confidential Request</span>
+                  <span class="material-symbols-outlined text-[18px]">send</span>
+                </button>
+              </form>
+
+              <div id="contact-success" class="hidden text-center py-10 space-y-4">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="material-symbols-outlined text-[36px]">check_circle</span>
+                </div>
+                <h4 class="text-2xl font-serif text-on-surface">Thank You!</h4>
+                <p class="text-sm text-on-surface-variant max-w-sm mx-auto">
+                  Your confidential matrimonial enquiry has been received. Our Matrimonial.com team will respond within 1 business day.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="w-full bg-surface-container-low text-on-surface pt-20 pb-10 border-t border-[#e5d7de]/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 items-start">
+        <!-- Col 1 -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+              <span class="material-symbols-outlined text-[20px]">favorite</span>
+            </div>
+            <div>
+              <span class="font-headline-sm text-lg text-on-surface block leading-tight font-serif">Matrimonial.com</span>
+              <span class="text-[11px] text-tertiary uppercase tracking-wider block font-medium">Matrimonial Matchmaking &amp; Counseling</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Compassionate family advisory expertise united with relational matrimonial matchmaking for individuals and esteemed families.
+          </p>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <h4 class="text-base font-semibold text-on-surface mb-3">Navigation</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-on-surface-variant">
+            <li><a href="#" class="hover:text-primary transition-colors">Home</a></li>
+            <li><a href="#engaged-pairs" class="hover:text-primary transition-colors">Recently Engaged Couples</a></li>
+            <li><a href="#browse-matches" class="hover:text-primary transition-colors">Curated Member Portfolios</a></li>
+            <li><a href="#about-us" class="hover:text-primary transition-colors">About the Bureau</a></li>
+            <li><a href="#contact-section" class="hover:text-primary transition-colors">Contact Mayfair</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <h4 class="text-base font-semibold text-on-surface mb-3">Mayfair Bureau</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-on-surface-variant">
+            <li>
+              <span class="font-semibold text-on-surface block text-xs">London Headquarters</span>
+              14 Berkeley Square, Mayfair<br>London W1J 6BD, United Kingdom
+            </li>
+            <li class="pt-1">
+              <span class="font-semibold text-on-surface block text-xs">Consultations</span>
+              Mon – Fri: By Strict Appointment
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <h4 class="text-base font-semibold text-on-surface mb-3">Contact Us</h4>
+          <div class="space-y-2 text-xs sm:text-sm text-on-surface-variant">
+            <a href="tel:+442079460912" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-[18px] text-secondary">call</span>
+              <span>+44 (0)20 7946 0912</span>
+            </a>
+            <a href="mailto:advisory@matrimonial.com" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-[18px] text-primary">mail</span>
+              <span>advisory@matrimonial.com</span>
+            </a>
+            <div class="pt-2">
+              <button onclick="openBooking('Online Schedule')" class="inline-flex items-center gap-1 text-xs text-primary hover:text-on-surface transition-colors font-medium cursor-pointer">
+                <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                <span>Schedule Online</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-outline-variant/30 text-center text-xs text-on-surface-variant">
+        <p>© Copyright 2026 Matrimonial.com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOOKING MODAL ==================== -->
+  <div id="booking-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-[#e5d7de] overflow-hidden" onclick="event.stopPropagation()">
+      <div class="bg-surface-container-low px-6 py-4 border-b border-[#e5d7de] flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-base text-on-surface">Schedule with Matrimonial.com</h3>
+            <p class="text-xs text-on-surface-variant">Bespoke Family Matchmaking</p>
+          </div>
+        </div>
+        <button onclick="closeBookingModal()" class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant cursor-pointer">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <div class="p-6">
+        <form onsubmit="handleBookingSubmit(event)" id="booking-form" class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Service / Consultation</label>
+            <input id="booking-service" type="text" value="Initial Consultation" class="w-full px-3.5 py-2 rounded-xl border border-outline-variant/60 text-xs sm:text-sm bg-surface/50 text-on-surface">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Your Full Name *</label>
+              <input type="text" required placeholder="Full Name" class="w-full px-3.5 py-2 rounded-xl border border-outline-variant/60 text-xs sm:text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Phone *</label>
+              <input type="tel" required placeholder="+44 7XXX XXXXXX" class="w-full px-3.5 py-2 rounded-xl border border-outline-variant/60 text-xs sm:text-sm">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-on-surface-variant mb-1 uppercase tracking-wider">Email Address *</label>
+            <input type="email" required placeholder="name@example.com" class="w-full px-3.5 py-2 rounded-xl border border-outline-variant/60 text-xs sm:text-sm">
+          </div>
+          <div class="pt-2 flex justify-end gap-3">
+            <button type="button" onclick="closeBookingModal()" class="px-4 py-2 rounded-xl text-xs font-medium text-on-surface-variant hover:bg-surface-container">Cancel</button>
+            <button type="submit" class="px-5 py-2 rounded-xl text-xs font-medium bg-primary hover:bg-primary-container text-white shadow-sm cursor-pointer">Confirm Consultation</button>
+          </div>
+        </form>
+
+        <div id="booking-success" class="hidden text-center py-6 space-y-3">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+            <span class="material-symbols-outlined text-[28px]">check_circle</span>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-on-surface">Consultation Confirmed!</h4>
+          <p class="text-xs text-on-surface-variant max-w-xs mx-auto">
+            Thank you. Our Matrimonial.com team will contact you promptly to finalize your meeting time.
+          </p>
+          <button onclick="closeBookingModal()" class="mt-2 px-5 py-2 rounded-full bg-primary text-white text-xs font-medium">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function showCategory(type) {
+      const bridesGrid = document.getElementById('brides-grid');
+      const groomsGrid = document.getElementById('grooms-grid');
+      const btnBrides = document.getElementById('btn-brides');
+      const btnGrooms = document.getElementById('btn-grooms');
+
+      if (type === 'brides') {
+        bridesGrid.classList.remove('hidden');
+        groomsGrid.classList.add('hidden');
+        btnBrides.className = "flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-secondary text-white shadow-sm";
+        btnGrooms.className = "flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer text-on-surface-variant hover:text-on-surface";
+      } else {
+        bridesGrid.classList.add('hidden');
+        groomsGrid.classList.remove('hidden');
+        btnGrooms.className = "flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-primary text-white shadow-sm";
+        btnBrides.className = "flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer text-on-surface-variant hover:text-on-surface";
+      }
+    }
+
+    function sendInterest(btn) {
+      if (btn.classList.contains('interest-sent')) {
+        btn.classList.remove('interest-sent', 'bg-emerald-600');
+        btn.classList.add('bg-primary');
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">favorite</span><span>Send Express Interest</span>';
+      } else {
+        btn.classList.add('interest-sent', 'bg-emerald-600');
+        btn.classList.remove('bg-primary');
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Interest Sent ✓</span>';
+      }
+    }
+
+    function openBooking(serviceName) {
+      const modal = document.getElementById('booking-modal');
+      const serviceInput = document.getElementById('booking-service');
+      const form = document.getElementById('booking-form');
+      const success = document.getElementById('booking-success');
+
+      if (serviceName && serviceInput) {
+        serviceInput.value = serviceName;
+      }
+      form.classList.remove('hidden');
+      success.classList.add('hidden');
+      modal.classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      modal.classList.add('hidden');
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      document.getElementById('booking-form').classList.add('hidden');
+      document.getElementById('booking-success').classList.remove('hidden');
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contact-form').classList.add('hidden');
+      document.getElementById('contact-success').classList.remove('hidden');
+    }
+
+    const marriageBgs = [
+      {
+        label: '💍 Black Tie & Couture',
+        url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=85',
+        tag: 'Classic British Groom & Bride'
+      },
+      {
+        label: '🏰 Country Manor',
+        url: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85',
+        tag: 'Cotswolds & Estate Romance'
+      },
+      {
+        label: '🌿 Country Romance',
+        url: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=2000&q=85',
+        tag: 'Somerset & Surrey Estates'
+      },
+      {
+        label: '💐 Cathedral & Arch',
+        url: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=2000&q=85',
+        tag: 'Sacred Vows & Cathedral Elegance'
+      }
+    ];
+
+    function setHeroBg(idx) {
+      const img = document.getElementById('hero-bg-img');
+      const tagEl = document.getElementById('hero-bg-tag');
+      if (img && marriageBgs[idx]) {
+        img.src = marriageBgs[idx].url;
+        if (tagEl) tagEl.textContent = marriageBgs[idx].tag;
+        for (let i = 0; i < 4; i++) {
+          const btn = document.getElementById('bg-btn-' + i);
+          if (btn) {
+            if (i === idx) {
+              btn.className = 'text-left text-xs px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer truncate bg-amber-400 text-stone-950 font-bold shadow-md';
+            } else {
+              btn.className = 'text-left text-xs px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer truncate bg-white/10 text-white/80 hover:bg-white/20';
+            }
+          }
+        }
+      }
+    }
+
+    function handleHeroSearch(e) {
+      e.preventDefault();
+      const el = document.getElementById('browse-matches');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Close modal on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeBookingModal();
+    });
+  </script>
+</body>
+</html>
+
